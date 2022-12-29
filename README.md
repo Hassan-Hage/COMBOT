@@ -40,3 +40,5 @@ Click on the button "Datei auswählen" to select a business process described as
 Select the button with the arrow symbol to upload the file to COMBOT. 
 
 Now, you can ask COMBOT to analyze and verify properties of interests. We added several possible questions in the background of COMBOT to provide some ideas how to verify properties of interests, especially coming from A-SPICE.
+
+You need support? Contact: hassan.hage@hsu-hh.de
