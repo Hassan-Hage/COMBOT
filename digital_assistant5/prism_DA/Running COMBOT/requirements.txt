@@ -1,0 +1,11 @@
+numpy
+Flask (version 1) *Doesn't work with version 2!
+Flask_Cors
+torch
+py4j
+nltk
+matplotlib
+pandas
+networkx
+xmltodict
+tkinter

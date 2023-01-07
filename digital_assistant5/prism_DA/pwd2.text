@@ -1,0 +1,28 @@
+const int tax;
+const int wax;
+const int pax;
+const int cax;
+
+
+//(0) Phi(1) -> Probability of whole process reaching end state -> Proves consistency of the whole processes by no deadlocks -> GP 2.1.7
+Pmin=? [ F "end_state" ]
+
+//(1) Phi(3) -> Minimum reward (day/cost) -> Delivers an estimation of the minimum expected day of the whole process
+Rmin=? [ F "end_state" ]
+
+//() Phi(4) -> Probability of whole process reaching end state -> Proves the execution of the whole processes based on A-SPICE guidelines -> GP 2.1.3
+
+//(2) User defined module for "final state" -> Probability of whole process reaching end state -> Proves consistency of the processes by no deadlocks -> GP 2.1.7
+Pmin=? [ F pax = cax ]
+
+//(3) User defined module for "final state" -> -> Minimum reward (day/cost) -> Delivers an estimation of the minimum expected day of the process
+Rmin=? [ F pax = cax ]
+
+//(4) User defined module and state number -> Probability of whole process reaching end state -> Proves consistency of the processes by no deadlocks 
+Pmin=? [ F tax = wax ]
+
+//(5) User defined module and state number -> -> Minimum reward (day/cost) -> Delivers an estimation of the minimum expected day of the process
+Rmin=? [ F tax = wax ]
+
+// tax = module number ("numbza"); wax = state number ("twos")
+// pax = module number; cax = "final state" for that module (faz)

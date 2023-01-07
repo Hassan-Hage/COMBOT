@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+<head>
+    <script defer src="https://code.jquery.com/jquery-3.2.1.js"></script>
+    <script defer src="https://kit.fontawesome.com/e71fe084a2.js" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <title>Digital Assistant</title>
+</head>
+<body>
+
+<div class="boxed">
+    <font size="+1"><b><p style="color:rgb(77, 56, 19)">List of functions that can be performed by the digital assistant:</p></b></font><br><br>
+
+    <b><u><li>Check A-SPICE Generic Practices (GP):</li></u></b>
+    <br><p style="color:rgb(132, 99, 37)">Question example: </p><p style="color:rgb(193, 157, 65)"><i>"What is the highest reachable A-SPICE level?"</i></br></p>
+    <br><hr> 
+
+    <br><b><u><li>Check probability:</li></u></b><br>
+    a) Verify GP 2.1.7 (&phi;<sub>1</sub>), Verify GP 2.1.3 (&phi;<sub>4</sub>), Probability of the whole process<br>
+    <br><p style="color:rgb(132, 99, 37)">Question examples: </p><p style="color:rgb(193, 157, 65)"><i>"Could you please verify GP 2.1.7?", </i><i>"Could you please verify GP 2.1.3?", </i><i>"What is the probability of the whole process reaching final state?"</i></br><br></p>
+    <hr style="border-top: 1px dotted rgb(172, 190, 29)"/><br>
+
+    b) Probability of a specific module reaching final state<br>
+    <br><p style="color:rgb(132, 99, 37)">Question example: </p><p style="color:rgb(193, 157, 65)"><i>"What is the probability of a specific module reaching final state?"</i></br><br></p>
+    <hr style="border-top: 1px dotted rgb(172, 190, 29)"/><br>
+
+    c) Probability of a specific module reaching a specific state<br>
+    <br><p style="color:rgb(132, 99, 37)">Question example: </p><p style="color:rgb(193, 157, 65)"><i>"What is the probability of a specific module reaching a specific state?"</i></br><br></p>    
+
+    <br><hr> 
+    <br><b><u><li>Check minimum days for performing whole process &phi;<sub>2</sub>:</li></u></b>
+    <br><p style="color:rgb(132, 99, 37)">Question example: </p><p style="color:rgb(193, 157, 65)"><i>"What are the minimum days for performing whole process?"</i></br><br></p>
+    <br><hr> 
+
+    <br><b><u><li>Check estimation expected minimum days &phi;<sub>3</sub>:</li></u></b><br>
+    a) Estimation of expected minimum days for performing whole process<br>
+    <br><p style="color:rgb(132, 99, 37)">Question example: </p><p style="color:rgb(193, 157, 65)"><i>"What is the estimation of expected minimum days for performing whole process?"</i></br><br></p>
+    <hr style="border-top: 1px dotted rgb(172, 190, 29)"/><br>
+
+    b) Estimation of expected minimum days a specific module reaching final state<br>
+    <br><p style="color:rgb(132, 99, 37)">Question example: </p><p style="color:rgb(193, 157, 65)"><i>"What is the estimation of expected minimum days of a specific module reaching final state?"</i></br><br></p>
+    <hr style="border-top: 1px dotted rgb(172, 190, 29)"/><br>
+
+    c) Estimation of expected minimum days a specific module reaching a specific state<br>
+    <br><p style="color:rgb(132, 99, 37)">Question example: </p><p style="color:rgb(193, 157, 65)"><i>"What is the estimation of expected minimum days of a specific module reaching a specific state?"</i></br><br></p>
+    <br><hr> 
+
+    <br><b><u><li>Check total number of transitions:</li></u></b>
+    <br><p style="color:rgb(132, 99, 37)">Question example: </p><p style="color:rgb(193, 157, 65)"><i>"What is the total number of transitions?"</i></br></p>
+    <br><hr> 
+
+    <br><b><u><li>Check total number of states:</li></u></b>
+    <br><p style="color:rgb(132, 99, 37)">Question example: </p><p style="color:rgb(193, 157, 65)"><i>"What is the total number of states?"</i></br></p>
+    <br><hr> 
+
+    <br><b><u><li>Check value of initial state:</li></u></b>
+    <br><p style="color:rgb(132, 99, 37)">Question example: </p><p style="color:rgb(193, 157, 65)"><i>"What is the value of initial state?"</i></br></p>
+    <br><hr> 
+
+    <br><b><u><li>Check building model time:</li></u></b>
+    <br><p style="color:rgb(132, 99, 37)">Question example: </p><p style="color:rgb(193, 157, 65)"><i>"What is the building model time?"</i></br></p>
+    <br><hr> 
+
+    <br><b><u><li>Check model checking time:</li></u></b>
+    <br><p style="color:rgb(132, 99, 37)">Question example: </p><p style="color:rgb(193, 157, 65)"><i>"What is the model checking time?"</i></br></p>
+    <br><hr> 
+
+    <br><b><u><li>Check modules names:</li></u></b>
+    <br><p style="color:rgb(132, 99, 37)">Question example: </p><p style="color:rgb(193, 157, 65)"><i>"Please list down all modules name."</i></br></p>
+    <br><hr> 
+
+    <br><b><u><li>Check variables names:</li></u></b>
+    <br><p style="color:rgb(132, 99, 37)">Question example: </p><p style="color:rgb(193, 157, 65)"><i>"Please list down all variables name."</i></br></p>
+
+
+</div>
+
+<div class="container">
+    <div class="chatbox">
+        <div class="chatbox__support">
+            <div class="chatbox__header">
+                <div class="chatbox__image--header">
+                    <img src="static/images/bot_chat.png" alt="image">
+                    <!-- <img src="https://img.icons8.com/color/48/000000/circled-user-female-skin-type-5--v1.png" alt="image"> -->
+
+                </div>
+                <div class="chatbox__content--header">
+                    <h4 class="chatbox__heading--header">Digital Assistant</h4>
+                    <p class="chatbox__description--header">Welcome! My name is Cubot. How can I help you?</p>
+                </div>
+            </div>
+            <div class="chatbox__messages">
+                <div></div>
+            </div>
+            <div class="chatbox__footer">
+                <input type="text" placeholder="Write a message...">
+                <button class="chatbox__send--footer send__button">Send</button>
+            </div>
+                <!-- <button class="chatbox__send--footer file__button"><i class="fa-solid fa-arrow-up-from-bracket"></i></button> -->
+                <!-- <input type="file" id="actual-btn" multiple accept=".jpg, .png, .xml" hidden/> 
+                <label for="actual-btn"><i class="fa-solid fa-arrow-up-from-bracket"></i></label>  -->
+                <!-- <div class="file-upload">
+                    <input class="file-upload__input" type="file" name="myFile[]" id="myFile" multiple>
+                    <button class="file-upload__button" type="button"><i class="fa-solid fa-arrow-up-from-bracket"></i></button>
+                    <span class="file-upload__label" hidden></span> 
+                </div> 
+
+                <!-- <h1>The File API in JavaScript</h1> -->
+                <!-- <form class="form" action="http://127.0.0.1:5000/upload" method="POST" enctype="multiple/form-data"></i>
+                    <input type="file" name="inpFile" id="inpFile" multiple hidden />
+                    <label for="inpFile" type="submit"><i class="fa-solid fa-arrow-up-from-bracket"></i></label>
+                </form> -->
+
+                <!-- <form class="form" id="myForm">
+                    <input type="file" id="inpFile" multiple hidden />
+                    <label for="inpFile" type="submit"><i class="fa-solid fa-arrow-up-from-bracket"></i></label>
+                </form> -->
+
+                <div></div> 
+                <form class="fixd__button" enctype = "multipart/form-data" onsubmit="return false;" >
+                    <input class="cx__send--footer file__button" id="file" type="file" name="static_file" />
+                    <button class="chatbox__upload--footer fix__button" id="upload-button" onclick="uploadFile(this.form)"><i class="fa-solid fa-arrow-up-from-bracket"></i></button>
+                    <!-- <label for="upload-button"><i class="fa-solid fa-arrow-up-from-bracket"></i></label> -->
+                </form>
+                <div id="static_file_response"> </div>
+
+           
+
+
+            
+        </div>
+        <div class="chatbox__button">
+            <button><img src="{{ url_for('static', filename='images/309.png') }}" /></button>
+        </div>
+    </div>
+</div>
+
+    <script>
+        // $SCRIPT_ROOT = {{ request.script_root|tojson }};
+    </script>
+    <script type="text/javascript" src="{{ url_for('static', filename='app.js') }}">
+
+
+
+
+    </script>
+
+</body>
+</html>
